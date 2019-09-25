@@ -1,3 +1,4 @@
+#encoding=utf-8
 import numpy as np
 import cv2
 import json
@@ -6,32 +7,43 @@ import os
 
 class Relation:
     def __init__(self):
+        # 图片的名字
         self.imagesFileName  = []
+        # 图片的数量
         self.numOfFile = 0
-        self.imageSize = []
+        # self.imageSize = []
+        # 关系
         self.relations = []
 
     def loadAnnot(self,jsonFile):
+        # json文件不存在
         if not os.path.isfile(jsonFile):
             return
+        # 加载json文件
         f = open(jsonFile, 'r')
         jsonDict = json.load(f)
+        # 解析json文件的内容
         for annot in jsonDict:
             self.imagesFileName.append(annot['name'])
             self.relations.append(annot['relations'])
         self.numOfFile = len(self.imagesFileName)
 
     def loadRel(self, filename):
+        # 获得图片目录中的索引
         id = self.imagesFileName.index(filename)
+        # 获得该图片对应的关系
         relations = self.relations[id]
+        # 获取该图片内subject和object之间所有关系
         relation =[]
         for rel in relations:
             relation.append((rel['subject'], rel['object'], rel['relation']))
+        # 返回该关系
         return relation
 
 #evalute code is coming soon
 
 #get each instance semantic from semanticMap and instanceMap
+# 从semanticMap和instanceMap获取每个实例语义
 def getInstanceCate(semanticMap, instanceMap):
     insId = np.unique(instanceMap)
     insId = list(insId[insId != 0])

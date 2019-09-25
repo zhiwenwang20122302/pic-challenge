@@ -16,6 +16,3 @@ Copyright (c) 2018, [S-Lab](http://liusi-group.com/).
 All rights reserved.
 
 This PIC API is made freely available to academic and non-academic entities for non-commercial purposes such as academic research, teaching, scientific publications, or personal experimentation. Permission is granted to use the code given that you agree to our license terms.
-
-
-
