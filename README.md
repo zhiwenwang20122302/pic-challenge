@@ -6,8 +6,8 @@ This repository provides python API that assists in loading, parsing and visuali
 
 ## Usage
 
-- The details of data can be visualized via [viz.py](https://github.com/siliu-group/pic-challenge/blob/master/viz.py).
-- The result can be evaluated via [eval.py](https://github.com/siliu-group/pic-challenge/blob/master/eval.py)
+- The details of data can be visualized via [viz.py](https://github.com/zhiwenwang20122302/pic-challenge/blob/master/viz.py).
+- The result can be evaluated via [eval.py](https://github.com/zhiwenwang20122302/pic-challenge/blob/master/eval.py)
 
 ## License:
 
